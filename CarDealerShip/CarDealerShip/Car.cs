@@ -9,17 +9,17 @@ namespace CarDealerShip
     public class Car : Vehicle
     {
 
-        public Car (string _make, string _model, int _year, int _vinNumber, double _price)
+        public Car (string _make, string _model, int _year, int _vinNumber)
         {
             this.Make = _make;
             this.Model = _model;
             this.Year = _year;
             this.VinNumber = _vinNumber;
-            this.Price = _price;
+            //this.Price = _price;
         }
-        public Car (int _fluidLevel)
-        {
-            this.fluidLevel = _fluidLevel;
-        }
+        //public Car(int _fluidLevel)
+        //{
+        //    this.FluidLevel = _fluidLevel;
+        //}
     }
 }

@@ -13,7 +13,7 @@ namespace CarDealerShip
         private int year;
         private int vinNumber;
         private double price;
-        public int fluidLevel;
+        private int fluidLevel;
 
 
         public Vehicle()
@@ -81,5 +81,26 @@ namespace CarDealerShip
                 price = value;
             }
         }
+
+        public int FluidLevel
+        {
+            get
+            {
+                return fluidLevel;
+            }
+
+            set
+            {
+                //if (fluidLevel < 0)
+                //    fluidLevel = 0;
+                //else if (fluidLevel > 100)
+                //    fluidLevel = 100;
+                //else
+                    fluidLevel = value;
+            }
+           
+        }
+       
+       
     }
 }

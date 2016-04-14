@@ -9,21 +9,18 @@ namespace CarDealerShip
     public class DealerShip
     {
         public List<Vehicle> vehicleList;
-        public List<Car> carList;
-        public List<Truck> truckList;
-        public List<SportsUtility> sportsUtilityList;
-        public List<Van> vanList;
 
         public DealerShip()
         {
             vehicleList = new List<Vehicle>();
-            carList = new List<Car>();
-            truckList = new List<Truck>();
-            sportsUtilityList = new List<SportsUtility>();
-            vanList = new List<Van>();
+        }
+        public double SetPrice(Vehicle vehicle, int _amount)
+        {
+            vehicle.Price = _amount;
+            return vehicle.Price;
         }
         
-        public List<Vehicle> AddCar(List<Vehicle> fleet, Vehicle vehicle)
+        public List<Vehicle> AddVehicle(List<Vehicle> fleet, Vehicle vehicle)
         {
             fleet.Add(vehicle);
             return fleet;
@@ -33,6 +30,22 @@ namespace CarDealerShip
         {
             vehicle.Price += 1000;
             return vehicle.Price;
+        }
+        public int AddFluid(Vehicle vehicle, int fluid_amount)
+        {
+            vehicle.FluidLevel += fluid_amount;
+
+            if (vehicle.FluidLevel < 0)
+        {
+                vehicle.FluidLevel = 0;
+        }
+        else if (vehicle.FluidLevel > 100)
+        {
+                vehicle.FluidLevel = 100;
+        }
+        
+           
+            return vehicle.FluidLevel;
         }
     }
 }

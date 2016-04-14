@@ -41,7 +41,7 @@ namespace CarDealerShip
         }
          public bool Test (Vehicle vehicle)
         {
-        if (vehicle.fluidLevel > 0)
+        if (vehicle.FluidLevel > 0)
         {
                 Console.WriteLine("Good to go");
         }
