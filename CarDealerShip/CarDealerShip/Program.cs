@@ -13,7 +13,8 @@ namespace CarDealerShip
             Car bmw = new Car("BMW", "7Series", 2016, 12994494);
             DealerShip dealership = new DealerShip();
             dealership.SetPrice(bmw, 43000);
-            dealership.RaisePrice(bmw);
+            dealership.RaisePrice(bmw, 1500);
+            dealership.LowerPrice(bmw, 2000);
             dealership.AddFluid(bmw, 112);
             dealership.AddVehicle(dealership.vehicleList, bmw);
             Customer jo = new Customer("Joe", 11);

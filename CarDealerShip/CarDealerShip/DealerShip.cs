@@ -26,9 +26,14 @@ namespace CarDealerShip
             return fleet;
         }
        
-        public double RaisePrice(Vehicle vehicle)
+        public double RaisePrice(Vehicle vehicle, double _amount)
         {
-            vehicle.Price += 1000;
+            vehicle.Price += _amount;
+            return vehicle.Price;
+        }
+        public double LowerPrice(Vehicle vehicle, double _amount)
+        {
+            vehicle.Price -= _amount;
             return vehicle.Price;
         }
         public int AddFluid(Vehicle vehicle, int fluid_amount)
