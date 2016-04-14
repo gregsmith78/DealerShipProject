@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarDealerShip
 {
-    public class Customer
+    public class Customer : ITestable
     {
         private string name;
         private int id;
@@ -38,6 +38,14 @@ namespace CarDealerShip
             {
                 id = value;
             }
+        }
+         public bool Test (Vehicle vehicle)
+        {
+        if (vehicle.fluidLevel > 0)
+        {
+                Console.WriteLine("Good to go");
+        }
+            return true;
         }
     }
 }

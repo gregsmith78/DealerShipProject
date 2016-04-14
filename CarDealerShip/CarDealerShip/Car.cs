@@ -17,5 +17,9 @@ namespace CarDealerShip
             this.VinNumber = _vinNumber;
             this.Price = _price;
         }
+        public Car (int _fluidLevel)
+        {
+            this.fluidLevel = _fluidLevel;
+        }
     }
 }

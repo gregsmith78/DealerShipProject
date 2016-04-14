@@ -13,6 +13,7 @@ namespace CarDealerShip
         private int year;
         private int vinNumber;
         private double price;
+        public int fluidLevel;
 
 
         public Vehicle()
