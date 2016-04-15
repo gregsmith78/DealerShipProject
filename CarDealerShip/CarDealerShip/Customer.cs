@@ -63,29 +63,24 @@ namespace CarDealerShip
         }
             return true;
         }
-        public double HaggleDownPrice(Vehicle vehicle, int _amount)
+        public double HaggleDownPrice(Vehicle vehicle)
         {
+
             if (vehicle.Mileage > 50000)
-            {
-                if (_amount > 0 && _amount < 500)
-                {
-                    vehicle.Price -= _amount;
+                { 
+                    vehicle.Price -= 500;
                 }
-                else
+                else if (vehicle.Mileage > 60000)
                 {
-                   // Console.WriteLine("Try again");
-                   // HaggleDownPrice(vehicle, _amount);
+                     vehicle.Price -= 1500;
                 }
-            }
-            else if (vehicle.Price > 60000)
-            { 
-            if (_amount >= 500 && _amount <= 1500)
-                    {
-                        vehicle.Price -= _amount;
-                    }
-            }
+            
             return vehicle.Price;
         }
+            
+     }
+           
+ }
 
-    }
-}
+    
+

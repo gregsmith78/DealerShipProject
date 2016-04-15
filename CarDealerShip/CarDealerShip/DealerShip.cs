@@ -14,11 +14,13 @@ namespace CarDealerShip
         {
             vehicleList = new List<Vehicle>();
         }
+
         public double SetPrice(Vehicle vehicle, int _amount)
         {
             vehicle.Price = _amount;
             return vehicle.Price;
         }
+
 
         public List<Vehicle> AddVehicle(List<Vehicle> fleet, Vehicle vehicle)
         {
@@ -26,16 +28,21 @@ namespace CarDealerShip
             return fleet;
         }
 
+
         public double RaisePrice(Vehicle vehicle, double _amount)
         {
             vehicle.Price += _amount;
             return vehicle.Price;
         }
+
+
         public double LowerPrice(Vehicle vehicle, double _amount)
         {
             vehicle.Price -= _amount;
             return vehicle.Price;
         }
+
+
         public int AddFluid(Vehicle vehicle, int fluid_amount)
         {
             vehicle.FluidLevel += fluid_amount;
@@ -51,11 +58,14 @@ namespace CarDealerShip
             return vehicle.FluidLevel;
         }
 
+
         public double AcceptPayment(Customer customer, Vehicle vehicle)
         {
             customer.CheckBook -= vehicle.Price;
             return customer.CheckBook;
         }
+
+
 
         public void OwnerShip(Customer customer, Vehicle vehicle)
         {

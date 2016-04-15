@@ -92,11 +92,7 @@ namespace CarDealerShip
 
             set
             {
-                //if (fluidLevel < 0)
-                //    fluidLevel = 0;
-                //else if (fluidLevel > 100)
-                //    fluidLevel = 100;
-                //else
+                
                     fluidLevel = value;
             }
            
