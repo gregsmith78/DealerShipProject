@@ -19,13 +19,13 @@ namespace CarDealerShip
             vehicle.Price = _amount;
             return vehicle.Price;
         }
-        
+
         public List<Vehicle> AddVehicle(List<Vehicle> fleet, Vehicle vehicle)
         {
             fleet.Add(vehicle);
             return fleet;
         }
-       
+
         public double RaisePrice(Vehicle vehicle, double _amount)
         {
             vehicle.Price += _amount;
@@ -41,16 +41,27 @@ namespace CarDealerShip
             vehicle.FluidLevel += fluid_amount;
 
             if (vehicle.FluidLevel < 0)
-        {
+            {
                 vehicle.FluidLevel = 0;
-        }
-        else if (vehicle.FluidLevel > 100)
-        {
+            }
+            else if (vehicle.FluidLevel > 100)
+            {
                 vehicle.FluidLevel = 100;
-        }
-        
-           
+            }
             return vehicle.FluidLevel;
         }
+
+        public double AcceptPayment(Customer customer, Vehicle vehicle)
+        {
+            customer.CheckBook -= vehicle.Price;
+            return customer.CheckBook;
+        }
+
+        public void OwnerShip(Customer customer, Vehicle vehicle)
+        {
+            Console.WriteLine("Here are your papers!!");
+            Console.WriteLine(customer.Name + " now owns a " + vehicle.Make +" " + vehicle.Model + "!!");
+        }
     }
+
 }

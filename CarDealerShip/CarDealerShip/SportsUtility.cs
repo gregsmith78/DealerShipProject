@@ -9,7 +9,7 @@ namespace CarDealerShip
     public class SportsUtility : Vehicle
     {
 
-        public SportsUtility (string _make, string _model, int _year, int _vinNumber, double _price, double _mileage)
+        public SportsUtility (string _make, string _model, int _year, int _vinNumber, double _mileage)
         {
 
             this.Make = _make;
