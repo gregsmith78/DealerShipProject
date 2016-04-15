@@ -10,7 +10,7 @@ namespace CarDealerShip
     {
         static void Main(string[] args)
         {
-            Car bmw = new Car("BMW", "7Series", 2016, 12994494);
+            Car bmw = new Car("BMW", "7Series", 2016, 12994494, 75000);
             DealerShip dealership = new DealerShip();
             dealership.SetPrice(bmw, 43000);
             dealership.RaisePrice(bmw, 1500);
@@ -19,6 +19,7 @@ namespace CarDealerShip
             dealership.AddVehicle(dealership.vehicleList, bmw);
             Customer jo = new Customer("Joe", 11);
             jo.Test(bmw);
+            jo.HaggleDownPrice(bmw, 3000);
           
         }
     }

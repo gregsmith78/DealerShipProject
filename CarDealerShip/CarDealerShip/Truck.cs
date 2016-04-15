@@ -8,14 +8,15 @@ namespace CarDealerShip
 {
     public class Truck : Vehicle
     {
-        public Truck(string _make, string _model, int _year, int _vinNumber)
+        public Truck(string _make, string _model, int _year, int _vinNumber, double _mileage)
         {
 
             this.Make = _make;
             this.Model = _model;
             this.Year = _year;
             this.VinNumber = _vinNumber;
-            //this.Price = _price;
+            this.Mileage = _mileage;
+            
         }
 
     }

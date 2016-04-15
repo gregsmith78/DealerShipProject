@@ -14,6 +14,7 @@ namespace CarDealerShip
         private int vinNumber;
         private double price;
         private int fluidLevel;
+        private double mileage;
 
 
         public Vehicle()
@@ -100,7 +101,18 @@ namespace CarDealerShip
             }
            
         }
-       
-       
+
+        public double Mileage
+        {
+            get
+            {
+                return mileage;
+            }
+
+            set
+            {
+                mileage = value;
+            }
+        }
     }
 }

@@ -47,5 +47,17 @@ namespace CarDealerShip
         }
             return true;
         }
+        public double HaggleDownPrice(Vehicle vehicle, int _amount)
+        {
+            if (vehicle.Mileage > 50000)
+            {
+                vehicle.Price -= _amount;
+            }
+            else if (vehicle.Price > 60000)
+            {
+                vehicle.Price -= _amount;
+            }
+            return vehicle.Price;
+        }
     }
 }
